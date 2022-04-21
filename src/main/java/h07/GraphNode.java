@@ -17,8 +17,7 @@ public class GraphNode<L> {
      * @param outgoingArcs Die ausgehenden Kanten des Knotens.
      */
 	public GraphNode(List<GraphArc<L>> outgoingArcs) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        this.outgoingArcs = outgoingArcs;
 	}
 
     /**
@@ -26,8 +25,7 @@ public class GraphNode<L> {
      * @return Die ausgehenden Kanten des Knotens.
      */
 	public List<GraphArc<L>> getOutgoingArcs() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return outgoingArcs;
 	}
 
     /**
@@ -35,7 +33,6 @@ public class GraphNode<L> {
      * @param outgoingArcs Die neuen ausgehenden Kanten des Knotens.
      */
 	public void setOutgoingArcs(List<GraphArc<L>> outgoingArcs) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        this.outgoingArcs = outgoingArcs;
 	}
 }

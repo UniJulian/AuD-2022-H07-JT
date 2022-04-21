@@ -29,7 +29,6 @@ public class AdjacencyMatrix<L> {
      * @return Die Adjazenzmatrix.
      */
 	public L[][] getMatrix() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return matrix;
 	}
 }

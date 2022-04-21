@@ -81,7 +81,6 @@ public class PriorityQueueHeap<T> implements IPriorityQueue<T> {
      * @return Die zugrundeliegende Heapstruktur.
      */
     public Object[] getInternalHeap() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return heap;
     }
 }

@@ -10,8 +10,8 @@ public class GraphArc<L> {
      * @param destination Das Ziel der Kante.
      */
 	public GraphArc(L length, GraphNode<L> destination) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        this.length = length;
+        this.destination = destination;
 	}
 
     /**
@@ -19,8 +19,7 @@ public class GraphArc<L> {
      * @return Die Länge der Kante.
      */
 	public L getLength() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return length;
 	}
 
     /**
@@ -28,8 +27,6 @@ public class GraphArc<L> {
      * @return Das Ziel der Kante.
      */
 	public GraphNode<L> getDestination() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return destination;
 	}
-
 }

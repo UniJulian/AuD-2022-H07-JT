@@ -11,8 +11,7 @@ public class Graph<L> {
      * @param nodes Die Knoten des Graphen.
      */
 	public Graph(List<GraphNode<L>> nodes) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        this.nodes = nodes;
 	}
 
     /**
@@ -29,7 +28,6 @@ public class Graph<L> {
      * @return Die Knoten des Graphen.
      */
 	public List<GraphNode<L>> getNodes() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return nodes;
 	}
 }

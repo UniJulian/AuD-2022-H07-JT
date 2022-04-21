@@ -71,7 +71,6 @@ public class PriorityQueueList<T> implements IPriorityQueue<T> {
 	 * @return Die Liste, die zur Realisierung der Priority Queue genutzt wird.
 	 */
 	public List<T> getInternalList() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return queue;
 	}
 }

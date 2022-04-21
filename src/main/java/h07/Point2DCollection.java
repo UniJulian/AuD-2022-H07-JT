@@ -15,8 +15,8 @@ public class Point2DCollection {
      * @param maxArcLength Die maximale Kantenlänge.
      */
     public Point2DCollection(List<Point2D> points, double maxArcLength) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        this.points = points;
+        this.maxArcLength = maxArcLength;
     }
 
     /**
@@ -38,8 +38,7 @@ public class Point2DCollection {
      * @return Die Punkte der Punktesammlung.
      */
     public List<Point2D> getPoints() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return points;
     }
 
     /**
@@ -47,7 +46,6 @@ public class Point2DCollection {
      * @return Die maximale Länge der Kanten.
      */
     public double getMaxArcLength() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return maxArcLength;
     }
 }
