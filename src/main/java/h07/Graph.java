@@ -19,8 +19,7 @@ public class Graph<L> {
      * @param adjacencyMatrix Die Adjazenzmatrix, die zu einem Graphen konvertiert werden soll.
      */
 	public Graph(AdjacencyMatrix<L> adjacencyMatrix) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H6 - not implemented"); // TODO: H6 - remove if implemented
 	}
 
     /**

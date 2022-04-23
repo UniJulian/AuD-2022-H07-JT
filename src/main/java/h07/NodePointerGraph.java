@@ -1,5 +1,8 @@
 package h07;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -21,34 +24,31 @@ public class NodePointerGraph<L, D> implements NodePointer<L, D> {
 	public NodePointerGraph(HashMap<GraphNode<L>, NodePointerGraph<L, D>> existingNodePointers,
                             HashMap<GraphArc<L>, ArcPointerGraph<L, D>> existingArcPointers,
                             GraphNode<L> graphNode) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H6 - not implemented"); // TODO: H6 - remove if implemented
 	}
 
 	@Override
-	public D getDistance() {
+	public @Nullable D getDistance() {
 		return distance;
 	}
 
 	@Override
-	public void setDistance(D distance) {
+	public void setDistance(@NotNull D distance) {
 		this.distance = distance;
 	}
 
 	@Override
-	public NodePointer<L, D> getPredecessor() {
+	public @Nullable NodePointer<L, D> getPredecessor() {
 		return predecessor;
 	}
 
 	@Override
-	public void setPredecessor(NodePointer<L, D> predecessor) {
+	public void setPredecessor(@NotNull NodePointer<L, D> predecessor) {
 		this.predecessor = predecessor;
 	}
 
 	@Override
 	public Iterator<ArcPointer<L, D>> outgoingArcs() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H6 - not implemented"); // TODO: H6 - remove if implemented
 	}
-
 }

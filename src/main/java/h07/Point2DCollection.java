@@ -29,8 +29,7 @@ public class Point2DCollection {
      * @param maxArcLength Die maximale Kantenlänge.
      */
     public Point2DCollection(int pointCount, Point2D from, Point2D to, double maxArcLength) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H8 - not implemented"); // TODO: H8 - remove if implemented
     }
 
     /**

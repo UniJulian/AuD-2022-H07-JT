@@ -20,19 +20,17 @@ public class ArcPointerAdjacencyMatrix<L, D> implements ArcPointer<L, D> {
 	public ArcPointerAdjacencyMatrix(HashMap<Integer, NodePointerAdjacencyMatrix<L, D>> existingNodePointers,
                                      HashMap<Pair<Integer, Integer>, ArcPointerAdjacencyMatrix<L, D>> existingArcPointers,
                                      AdjacencyMatrix<L> adjacencyMatrix, int row, int column) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H7 - not implemented"); // TODO: H7 - remove if implemented
 	}
 
 	@Override
 	public L getLength() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H7 - not implemented"); // TODO: H7 - remove if implemented
+
 	}
 
 	@Override
 	public NodePointer<L, D> destination() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H7 - not implemented"); // TODO: H7 - remove if implemented
 	}
 }

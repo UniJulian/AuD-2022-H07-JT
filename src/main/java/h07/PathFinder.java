@@ -13,7 +13,6 @@ public class PathFinder<L, D> implements Function<NodePointer<L, D>, List<NodePo
      */
 	@Override
 	public List<NodePointer<L, D>> apply(NodePointer<L, D> endNode) {
-        // TODO
-        throw new RuntimeException("Not implemented");
-	}
+        throw new RuntimeException("H5 - not implemented"); // TODO: H5 - remove if implemented
+    }
 }

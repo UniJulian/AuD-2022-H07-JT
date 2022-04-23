@@ -1,5 +1,8 @@
 package h07;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -25,33 +28,31 @@ public class NodePointerAdjacencyMatrix<L, D> implements NodePointer<L, D> {
 	public NodePointerAdjacencyMatrix(HashMap<Integer, NodePointerAdjacencyMatrix<L, D>> existingNodePointers,
                                       HashMap<Pair<Integer, Integer>, ArcPointerAdjacencyMatrix<L, D>> existingArcPointers,
                                       AdjacencyMatrix<L> adjacencyMatrix, int row) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H7 - not implemented"); // TODO: H7 - remove if implemented
 	}
 
 	@Override
-	public D getDistance() {
+	public @Nullable D getDistance() {
 		return distance;
 	}
 
 	@Override
-	public void setDistance(D distance) {
+	public void setDistance(@NotNull D distance) {
 		this.distance = distance;
 	}
 
 	@Override
-	public NodePointer<L, D> getPredecessor() {
+	public @Nullable NodePointer<L, D> getPredecessor() {
 		return predecessor;
 	}
 
 	@Override
-	public void setPredecessor(NodePointer<L, D> predecessor) {
+	public void setPredecessor(@NotNull NodePointer<L, D> predecessor) {
 		this.predecessor = predecessor;
 	}
 
 	@Override
 	public Iterator<ArcPointer<L, D>> outgoingArcs() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H7 - not implemented"); // TODO: H7 - remove if implemented
 	}
 }

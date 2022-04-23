@@ -1,5 +1,7 @@
 package h07;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -13,7 +15,7 @@ public class Dijkstra<L, D>  {
     private final BiFunction<D, L, D> distanceFunction;
     private final IPriorityQueue<NodePointer<L, D>> queue;
 
-    private Predicate<NodePointer<L, D>> predicate;
+    private @Nullable Predicate<NodePointer<L, D>> predicate;
 
     /**
      * Erzeugt eine Instanz von Dijkstra, welche den Dijkstra Algorithmus ausführt.
@@ -23,8 +25,7 @@ public class Dijkstra<L, D>  {
      */
 	public Dijkstra(Comparator<D> comparator, BiFunction<D, L, D> distanceFunction,
 			Function<Comparator<NodePointer<L,D>>, IPriorityQueue<NodePointer<L, D>>> queueFactory) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
     /**
@@ -32,8 +33,7 @@ public class Dijkstra<L, D>  {
      * @param startNode Der Startknoten, von dem der Algorithmus aus die Suche startet.
      */
 	public void initialize(NodePointer<L, D> startNode) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
     /**
@@ -42,8 +42,7 @@ public class Dijkstra<L, D>  {
      * @param predicate Das Prädikat, welches beim Eintreffen die Suche vorzeitig beendet.
      */
 	public void initialize(NodePointer<L, D> startNode, Predicate<NodePointer<L, D>> predicate) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
     /**
@@ -51,8 +50,7 @@ public class Dijkstra<L, D>  {
      * @return Alle ermittelten Knoten, ausgenommen den Startknoten.
      */
 	public List<NodePointer<L, D>> run() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
     /**
@@ -60,8 +58,7 @@ public class Dijkstra<L, D>  {
      * @param currentNode Zu expandierender Knoten.
      */
 	private void expandNode(NodePointer<L, D> currentNode) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
     /**
@@ -70,7 +67,6 @@ public class Dijkstra<L, D>  {
      * @return true, falls der Algorithmus terminiert.
      */
 	private boolean finished(NodePointer<L, D> currentNode) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 }

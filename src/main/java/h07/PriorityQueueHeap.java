@@ -1,5 +1,7 @@
 package h07;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Comparator;
 import java.util.HashMap;
 
@@ -15,20 +17,17 @@ public class PriorityQueueHeap<T> implements IPriorityQueue<T> {
      * @param capacity Die Kapazität der Queue.
      */
 	public PriorityQueueHeap(Comparator<T> priorityComparator, int capacity) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
     @Override
 	public void add(T item) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
 	@Override
-	public T delete(T item) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+	public @Nullable T delete(T item) {
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
     /**
@@ -41,39 +40,33 @@ public class PriorityQueueHeap<T> implements IPriorityQueue<T> {
 	}
 
 	@Override
-	public T getFront() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+	public @Nullable T getFront() {
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
 	@Override
-	public T deleteFront() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+	public @Nullable T deleteFront() {
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
 	@Override
 	public int getPosition(T item) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
     @Override
     public boolean contains(T item) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
     }
 
     @Override
 	public void clear() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
 	}
 
 	@Override
 	public Comparator<T> getPriorityComparator() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        return priorityComparator;
 	}
 
     /**

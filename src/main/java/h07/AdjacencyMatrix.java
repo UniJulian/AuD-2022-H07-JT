@@ -9,10 +9,9 @@ public class AdjacencyMatrix<L> {
      * Initialisiert die Adjazenzmatrix über die gegebene Matrix.
      * @param matrix Die Matrix, die als Adjazenzmatrix genutzt werden soll.
      */
-	public AdjacencyMatrix(L[][] matrix) {
-        // TODO
-        throw new RuntimeException("Not implemented");
-	}
+    public AdjacencyMatrix(L[][] matrix) {
+        this.matrix = matrix;
+    }
 
     /**
      * Erzeugt aus dem gegebenen Graph eine Adjazenzmatrix.
@@ -20,8 +19,7 @@ public class AdjacencyMatrix<L> {
      */
 	@SuppressWarnings("unchecked")
 	public AdjacencyMatrix(Graph<L> graph) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H7 - not implemented"); // TODO: H7 - remove if implemented
 	}
 
     /**

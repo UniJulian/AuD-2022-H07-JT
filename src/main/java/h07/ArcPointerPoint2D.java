@@ -20,19 +20,16 @@ public class ArcPointerPoint2D implements ArcPointer<Double, Double> {
     public ArcPointerPoint2D(HashMap<Point2D, NodePointerPoint2D> existingNodePointers,
                              HashMap<Pair<Point2D, Point2D>, ArcPointerPoint2D> existingArcPointers,
                              Point2D source, Point2D destination, Point2DCollection collection) {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H8 - not implemented"); // TODO: H8 - remove if implemented
     }
 
     @Override
     public Double getLength() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H8 - not implemented"); // TODO: H8 - remove if implemented
     }
 
     @Override
     public NodePointer<Double, Double> destination() {
-        // TODO
-        throw new RuntimeException("Not implemented");
+        throw new RuntimeException("H8 - not implemented"); // TODO: H8 - remove if implemented
     }
 }
