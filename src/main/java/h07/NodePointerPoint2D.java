@@ -11,11 +11,12 @@ import java.util.List;
 public class NodePointerPoint2D implements NodePointer<Double, Double> {
     private final HashMap<Point2D, NodePointerPoint2D> existingNodePointers;
     private final HashMap<Pair<Point2D, Point2D>, ArcPointerPoint2D> existingArcPointers;
-    private NodePointer<Double, Double> predecessor;
-    private double distance;
 
     private final Point2DCollection collection;
     private final Point2D point;
+
+    private @Nullable NodePointer<Double, Double> predecessor;
+    private @Nullable Double distance;
 
     /**
      * Erzeugt einen Verweis auf einen Punkt einer Punktsammlung.

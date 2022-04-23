@@ -15,8 +15,8 @@ public class NodePointerAdjacencyMatrix<L, D> implements NodePointer<L, D> {
     private final HashMap<Integer, NodePointerAdjacencyMatrix<L, D>> existingNodePointers;
     private final HashMap<Pair<Integer, Integer>, ArcPointerAdjacencyMatrix<L, D>> existingArcPointers;
 
-    private D distance;
-    private NodePointer<L, D> predecessor;
+    private @Nullable D distance;
+    private @Nullable NodePointer<L, D> predecessor;
 
     /**
      * Erzeugt einen Verweis auf eine Kante eines Graphen, gegeben durch eine Adjazenzmatrix.
