@@ -41,7 +41,7 @@ public interface IPriorityQueue<T> {
      * Diese Position ist durch die durch den Comparator<T> induzierte Ordnung vorgegeben.
      * Die Methode hat keine Auswirkungen und gibt -1 zurück, falls das Element nicht in der Queue sein sollte.
      * @param item Das Element für das die Position bestimmt werden soll.
-     * @return Die Position des Parameters item, oder null, falls item nicht in der Queue sein sollte.
+     * @return Die Position des Parameters item, oder -1, falls item nicht in der Queue sein sollte.
      */
     int getPosition(T item);
 
