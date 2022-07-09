@@ -16,7 +16,9 @@ public class PriorityQueueList<T> implements IPriorityQueue<T> {
 	 * @param priorityComparator Die auf die Priority Queue induzierte Ordnung.
 	 */
 	public PriorityQueueList(Comparator<T> priorityComparator) {
-        throw new RuntimeException("H2 - not implemented"); // TODO: H2 - remove if implemented
+
+        this.priorityComparator = priorityComparator;
+        queue = new LinkedList<>();
 	}
 
 	@Override
@@ -26,27 +28,27 @@ public class PriorityQueueList<T> implements IPriorityQueue<T> {
 
 	@Override
 	public @Nullable T delete(T item) {
-        throw new RuntimeException("H2 - not implemented"); // TODO: H2 - remove if implemented
+        return queue.remove(item)? item: null;
 	}
 
 	@Override
 	public @Nullable T getFront() {
-        throw new RuntimeException("H2 - not implemented"); // TODO: H2 - remove if implemented
+        return queue.get(0);
 	}
 
 	@Override
 	public @Nullable T deleteFront() {
-        throw new RuntimeException("H2 - not implemented"); // TODO: H2 - remove if implemented
+        return queue.remove(0);
 	}
 
 	@Override
 	public int getPosition(T item) {
-        throw new RuntimeException("H2 - not implemented"); // TODO: H2 - remove if implemented
+        return queue.indexOf(item);
 	}
 
     @Override
     public boolean contains(T item) {
-        throw new RuntimeException("H2 - not implemented"); // TODO: H2 - remove if implemented
+        return queue.contains(item);
     }
 
     @Override
@@ -56,7 +58,9 @@ public class PriorityQueueList<T> implements IPriorityQueue<T> {
 
 	@Override
 	public void clear() {
-        throw new RuntimeException("H2 - not implemented"); // TODO: H2 - remove if implemented
+       while(!queue.isEmpty()){
+           queue.remove(0);
+       }
 	}
 
 	/**
