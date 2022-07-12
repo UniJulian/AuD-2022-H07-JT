@@ -23,12 +23,15 @@ public class PriorityQueueList<T> implements IPriorityQueue<T> {
 
 	@Override
 	public void add(T item) {
-        throw new RuntimeException("H2 - not implemented"); // TODO: H2 - remove if implemented
+        queue.add(item);
+        queue.sort(priorityComparator.reversed());
 	}
 
 	@Override
 	public @Nullable T delete(T item) {
-        return queue.remove(item)? item: null;
+        T returnVal = queue.remove(item)? item: null;
+        queue.sort(priorityComparator.reversed());
+        return returnVal;
 	}
 
 	@Override
@@ -43,7 +46,8 @@ public class PriorityQueueList<T> implements IPriorityQueue<T> {
 
 	@Override
 	public int getPosition(T item) {
-        return queue.indexOf(item);
+        int i = queue.indexOf(item);
+        return (i == -1)? i: i+ 1;
 	}
 
     @Override
@@ -58,9 +62,7 @@ public class PriorityQueueList<T> implements IPriorityQueue<T> {
 
 	@Override
 	public void clear() {
-       while(!queue.isEmpty()){
-           queue.remove(0);
-       }
+       queue.clear();
 	}
 
 	/**
