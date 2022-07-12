@@ -4,6 +4,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Map;
 
 public class PriorityQueueHeap<T> implements IPriorityQueue<T> {
     private final Comparator<T> priorityComparator;
@@ -17,17 +18,46 @@ public class PriorityQueueHeap<T> implements IPriorityQueue<T> {
      * @param capacity Die Kapazität der Queue.
      */
 	public PriorityQueueHeap(Comparator<T> priorityComparator, int capacity) {
-        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
+        if(capacity<= 0)
+            throw new IllegalArgumentException();
+        this.priorityComparator = priorityComparator;
+        heap = (T[]) new Object[capacity] ;
+        size = 0;
+        indexMap = new HashMap<>(capacity);
 	}
 
     @Override
-	public void add(T item) {
-        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
+	public void add(T item) { // macht mies keinen sinn idk tbh
+        int index;
+        if(size == 0){
+            index = size;
+            heap[index] = item;}
+        else if(size % 2 == 0){
+            index = size* 2 + 1;
+            heap[index] = item;}
+        else{
+            index = size* 2 + 2;
+            heap[index] = item;}
+        indexMap.put(item,index);
+
+
+
+        size++;
+        sort();
+
 	}
+    private void sort(){
+
+    }
 
 	@Override
 	public @Nullable T delete(T item) {
-        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
+        if(!indexMap.containsKey(item))
+            return null;
+        indexMap.remove(item);
+        heap[size] = null;
+        size--;
+        return item;
 	}
 
     /**
@@ -41,27 +71,35 @@ public class PriorityQueueHeap<T> implements IPriorityQueue<T> {
 
 	@Override
 	public @Nullable T getFront() {
-        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
+        return heap[0];
 	}
 
 	@Override
 	public @Nullable T deleteFront() {
-        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
+
+        T t = heap[0];
+        heap[0] = null;
+        indexMap.remove(t);
+        return t;
 	}
 
 	@Override
 	public int getPosition(T item) {
-        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
+        if(!indexMap.containsKey(item))
+            return -1;
+        return indexMap.get(item) + 1 ;
+
 	}
 
     @Override
     public boolean contains(T item) {
-        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
+        return indexMap.containsKey(item);
     }
 
     @Override
 	public void clear() {
-        throw new RuntimeException("H3 - not implemented"); // TODO: H3 - remove if implemented
+        heap = (T[]) new Object[size];
+        indexMap.clear();
 	}
 
 	@Override
