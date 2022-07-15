@@ -134,6 +134,7 @@ public class PublicTests {
         void testDeleteFront() {
             Q queue = newEmptyQueue();
 
+
             queue.add(2);
             queue.add(3);
             queue.add(5);
