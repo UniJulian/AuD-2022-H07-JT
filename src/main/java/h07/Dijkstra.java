@@ -25,7 +25,15 @@ public class Dijkstra<L, D>  {
      */
 	public Dijkstra(Comparator<D> comparator, BiFunction<D, L, D> distanceFunction,
 			Function<Comparator<NodePointer<L,D>>, IPriorityQueue<NodePointer<L, D>>> queueFactory) {
-        throw new RuntimeException("H4 - not implemented"); // TODO: H4 - remove if implemented
+        if(comparator == null)
+            throw new IllegalArgumentException();
+        this.comparator = comparator;
+        this.distanceFunction = distanceFunction;
+
+
+        //this.queue = queueFactory.apply(p  );
+        throw new RuntimeException();
+
 	}
 
     /**
